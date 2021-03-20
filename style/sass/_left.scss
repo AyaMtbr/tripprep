@@ -1,0 +1,125 @@
+#weather {
+  .current-temp, .max-temp, .min-temp {
+    font-weight: bold;
+  }
+}
+
+#current-weather {
+  margin: 10px;
+  padding: 0 20px;
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .current-temp {
+    font-size: 2.5em;
+    
+    span {
+      font-size: 1em;
+    }
+  }
+
+  .current-weather-description {
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+
+  & > * {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5;
+  }
+}
+
+#daily-weather {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  margin: 10px;
+
+  .weather-day  {
+    text-align: center;
+    padding: 10px;
+
+    .daily-weather-icon {
+      width: 60px;
+    }
+    .min-temp {
+      opacity: 0.4;
+    }
+  }
+
+  .weather-day + .weather-day {
+    border-left: 1px solid #eee;
+  }  
+}
+
+.locale-container {
+  div, h3, span {
+    display: inline-block;
+  }
+
+  span {
+    padding-right: 10px;
+  }
+}
+
+#hotel {
+  max-height: 300px;
+  overflow-y: scroll;
+  margin: 10px;
+  padding: 10px;
+
+  .hotel-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+
+    .hotel-detail-left {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      img {
+        max-width: 80px;
+        padding-right: 10px;
+      }
+      small {
+        display: block;
+        font-weight: 100;
+        color: #999;
+      }
+    }
+
+    span {
+      margin: 10px;
+    }
+
+    .hotel-rating {
+      background: #21c2f5;
+      border-radius: 5px;
+      color: #fff;
+      padding: 5px;
+    }
+  }
+
+  .hotel-detail + .hotel-detail {
+    border-top: 1px solid #eee;
+  }
+}
+
+@media (max-width: 960px) {
+  #daily-weather .weather-day + .weather-day {
+    border: none;
+  }
+}
+
+@media (max-width: 375px) {
+  #hotel .hotel-detail .hotel-detail-left {
+
+    small {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta property="og:title" content="TripPrep">
+  <meta property="og:image" content="http://tripprep-01.firebaseapp.com/fimages/site_img.jpg" />
+  <meta property="og:image:secure_url" content="https://tripprep-01.firebaseapp.com/images/site_img.jpg" />
+  <meta property="og:description" content="A dashboard of consolidated data about the desired destination. The app displays local weather, currency, news and a hotel list of the destination. Powered by five REST APIs." />
+  <title>TripPrep</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@300;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+  <main>
+    <section class="search-wrapper">
+      <div class="search-content">
+        <img src="images/backpacker.png" width="100" class="logo">
+        <h1 class="logo">TripPrep</h1>
+        <h2>Where are you heading?</h2>
+        <form>
+          <input type="text" id="input-location" value="" placeholder="Type a city name" autocomplete="off">
+          <input class="search-btn btn" type="button" onclick="getUserInput()" value="|  Search">
+        </form>
+      </div>
+    </section>
+
+    <!-- Modal window -->
+    <section class="location-container">
+      <div class="location-choices">
+      <div class="close" onclick="closeModal()"></div>
+      <h2>Select your destination:</h2>
+      
+      <!-- Location list -->
+      <ul class="reset"></ul>
+      </div>
+    </section>
+
+    <!-- Loading spinner -->
+    <div class="lds-spinner">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Search result -->
+    <section id="search-result">
+
+      <!-- Search result header -->
+      <div class="destination-container">
+        <div id="flag" class="reset"></div>
+        <h2 id="destination"></h2>
+      </div>
+      <div class="search-again-btn btn" onclick="searchAgain()" >Search Again</div>
+      
+      <!-- Search result main content -->
+      <div class="result-container">
+        <div class="left-side">
+          <div class="locale-container">
+            <!-- Currency -->
+            <div>
+              <h3>Currency:&nbsp;</h3><span id="currency"></span>
+            </div>
+
+            <!-- Language -->
+            <div>
+              <h3>Language:&nbsp;</h3><span id="language"></span>
+            </div>
+          </div>
+
+          <!-- Weather -->
+          <div id="weather">
+            <div id="current-weather" class="reset data-bkg"></div>
+            <div id="daily-weather" class="reset data-bkg"></div>
+          </div>
+
+          <!-- Hotels -->
+          <div>
+            <h3>Hotels near your destination:</h3>
+            <div id="hotel" class="data-bkg reset"></div>
+          </div>
+        </div>
+
+        <div class="right-side">
+          <!-- News -->
+          <div>
+            <h3>Local News:</h3>
+            <div id="news" class="data-bkg reset"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>Designed and coded by <a href="https://ayamatsubara.com" target="_blank">Aya Matsubara</a>.</footer>
+
+  <script src="scripts/config.js"></script>
+  <script src="scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+// Reset CSS
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, a, em, font, img, small, strike, strong, sub, sup, tt, var, ol, ul, li, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-family: inherit;
+}
+
+a, li {
+  list-style: none;
+	text-decoration: none;
+	color: inherit;
+}
+
+$color-blue: #3a7fff;
+$color-dark:#3c5a7f;
+$color-gray: #000;
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+	// background-color: $color-blue;
+	background: url('../images/blue_sky.jpg');
+	background-size: cover;
+  color: #111050;
+}
+
+h1,h2 {
+	font-weight: bold;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.5em;
+}
+
+h2 {
+	font-size: 1.8em;
+}
+
+h3,h4 {
+	font-weight: bold;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+.btn {
+	cursor: pointer;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	color: #fff;
+	padding: 15px;
+	font-size: 14px;
+}

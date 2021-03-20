@@ -1,0 +1,28 @@
+#news {
+  max-height: 520px;
+  overflow: scroll;
+  margin: 10px;
+  padding: 10px;
+
+  div {
+    width: calc(50% - 20px);
+    display: inline-block;
+    margin: 10px;
+    vertical-align: top;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  #news {
+    div {
+      width: calc(100% - 20px);     
+    }
+    p {
+      display: none;
+    }
+  }
+}
