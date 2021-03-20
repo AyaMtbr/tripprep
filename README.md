@@ -4,9 +4,9 @@
 A dashboard of consolidated data about the desired destination. It displays local weather, currency, news and a hotel list of the searched destination. 
 
 Powered by the following APIs:
-- Geocoding
-- OpenWeatherMap
-- REST Countries
+- Geocoding API
+- OpenWeatherMap API
+- REST Countries API
 - Hotels API
 - News API
 
