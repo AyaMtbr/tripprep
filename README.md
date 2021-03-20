@@ -6,7 +6,8 @@ A dashboard of consolidated data about the desired destination. It displays loca
 Powered by the following APIs:
 - Geocoding
 - OpenWeatherMap
-_ REST Countries
-- Hotels API and News API
+- REST Countries
+- Hotels API
+- News API
 
 Demo: https://tripprep-01.firebaseapp.com/
