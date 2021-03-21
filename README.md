@@ -9,5 +9,3 @@ Powered by the following APIs:
 - REST Countries API
 - Hotels API
 - News API
-
-Demo: https://tripprep-01.firebaseapp.com/
